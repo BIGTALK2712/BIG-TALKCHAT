@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <img src="bigtalk c.png" alt="lets be fast friends">
+
+  
+  <style>
+    /* CSS styles for the chat window and messages */
+    #chat-window {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 500px;
+      overflow-y: scroll;
+    }
+    #chat-messages {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #chat-messages li {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 3px;
+      background-color: #f1f1f1;
+    }
+    #chat-form {
+      margin-top: 10px;
+    }
+    #chat-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    #chat-form input[type="text"] {
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    #chat-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <div id="chat-window">
+    <ul id="chat-messages"></ul>
+  </div>
+  <form id="chat-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="message">Message:</label>
+    <input type="text" id="message" name="message"><br>
+    <input type="submit" value="Send">
+  </form>
+  <script>
+    // JavaScript code for handling form submission and updating the chat messages
+    // Get references to the form and chat messages list
+    const form = document.getElementById("chat-form");
+    const messagesList = document.getElementById("chat-messages");
+
+    // Handle form submission
+    form.addEventListener("submit", event => {
+      event.preventDefault(); // Prevent page refresh
+
+      // Get the user's message and username
+      const message = form.elements["message"].value;
+      const username = form.elements["username"].value;
+
+      // Create a new list item for the message
+      const messageItem = document.createElement("li");
+      messageItem.innerHTML = `${username}: ${message}`;
+
+      // Add the message to the chat messages list
+      messagesList.appendChild(messageItem);
+
+      // Clear the form's input fields
+      form.elements["message"].value = "";
+      form.elements["username"].value = "";
+    });
+  </script>
+</body>
+</html>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <footer>
+    <p class="Copyright">Copyright © 2023 bigtalk</p>
+  </footer>
+  
+</header>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: url("big talk.gif") no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your content here -->
+  </body>
+</html>
